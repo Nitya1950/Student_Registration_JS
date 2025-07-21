@@ -1,7 +1,9 @@
 /* General Styles */
 body {
     font-family: Verdana, sans-serif;
-    background: #f4f6f8;
+    background: url('/resources/light-mode-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    transition: background-image 0.5s ease;
     margin: 0;
     padding: 0;
     color: #222;
@@ -48,6 +50,7 @@ label {
 input[type="text"], input[type="email"] {
     width: 100%;
     padding: 0.6rem;
+    background-color: #67bbd0;
     border: 1px solid #bdbdbd;
     border-radius: 4px;
     font-size: 1rem;
@@ -152,7 +155,9 @@ button[type="submit"]:hover {
 }
 /* Dark Mode Styles */
 body.dark {
-    background-color: #121212;
+    background: url('/resources/dark-mode-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    transition: background-image 0.5s ease;
     color: #ffffff;
   }
   
@@ -221,7 +226,7 @@ body.dark {
   }
   
   input:checked + .slider {
-    background-color: #98ffee;
+    background-color: #2ba7c6;
   }
   
   input:checked + .slider:before {
