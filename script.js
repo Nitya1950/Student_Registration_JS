@@ -12,7 +12,7 @@ let editIndex = null; // Track which record is being edited
 function validateInputs(name, id, email, contact) {
     const nameRegex = /^[A-Za-z ]+$/;
     const idRegex = /^\d+$/;
-    const contactRegex = /^\d{7,15}$/; // 7-15 digits
+    const contactRegex = /^\d{10}$/; // 7-15 digits
     const emailRegex = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
 
     if (!name || !id || !email || !contact) {
@@ -32,7 +32,7 @@ function validateInputs(name, id, email, contact) {
         return false;
     }
     if (!contactRegex.test(contact)) {
-        alert('Contact number must be 7-15 digits.');
+        alert('Contact number must be 10 digits.');
         return false;
     }
     return true;
