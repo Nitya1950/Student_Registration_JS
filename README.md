@@ -57,9 +57,7 @@
 </div>
 
 ## 🛠️ Setup Instructions
+👉 **Check out the page for yourself here:** [Student Registration System Live Demo](https://nitya1950.github.io/Student_Registration_JS/)
 
-1. Clone this repo or download the ZIP
-2. Open `index.html` in your browser
-3. You're all set!
 
 
