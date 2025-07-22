@@ -8,6 +8,55 @@ body {
     padding: 0;
     color: #222;
 }
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Slight transparency */
+  border-bottom: 1px solid #ccc;
+}
+
+body.dark .top-bar {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-color: #444;
+}
+
+.school-brand {
+  display: flex;
+  align-items: center;
+}
+
+.school-logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.school-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #222;
+}
+
+body.dark .school-name {
+  color: #eee;
+}
+
+.toggle-wrapper button {
+  font-size: 18px;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  transition: background 0.3s;
+}
+
+.toggle-wrapper button:hover {
+  background-color: #0056b3;
+}
+
 
 header {
     background: #2ba7c6;
@@ -66,7 +115,34 @@ button[type="submit"] {
     font-size: 1rem;
     cursor: pointer;
     transition: background 0.2s;
+    box-shadow: 2px 2px 3px #215b7a
 }
+.form-button {
+    position: relative;
+    padding: 3px;
+    background: linear-gradient(90deg, #03a9f4, #f441a5);
+    border-radius: 0.9em;
+    transition: all 0.4s ease;
+  }
+  
+  .form-button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    border-radius: 0.9em;
+    z-index: -10;
+    filter: blur(0);
+    transition: filter 0.4s ease;
+  }
+  
+  .form-button:hover::before {
+    background: linear-gradient(90deg, #03a9f4, #f441a5);
+    filter: blur(1.2em);
+  }
+  .form-button:active::before {
+    filter: blur(0.2em);
+  }
 
 button[type="submit"]:hover {
     background: #1e768b;

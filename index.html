@@ -10,14 +10,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Dark Mode Toggle -->
-<div class="toggle-container">
-    <label class="switch">
-      <input type="checkbox" id="darkModeToggle">
-      <span class="slider round"></span>
-    </label>
-    <span class="toggle-label">Dark Mode</span>
+    <!-- Top Navigation Bar -->
+<div class="top-bar">
+    <div class="school-brand">
+      <img src="your-logo.png" alt="School Logo" class="school-logo"> <!-- Replace with your actual logo file -->
+      <span class="school-name">My School Name</span> <!-- Customize name -->
+    </div>
+    <!--dark toggle button -->
+    <div class="toggle-wrapper">
+      <button id="toggle-dark" class="dark-toggle-button">
+        <span class="icon" </span>
+        </button>
+    </div>
   </div>
+
     <!-- Header Section -->
     <header>
         <h1>Student Registration System</h1>
@@ -42,7 +48,7 @@
             <div class="form-group">
                 <label for="contactNo">Contact No.:</label>
                 <input type="text" id="contactNo" name="contactNo" required>
-            </div>
+            </div class="form-button">
             <button type="submit" id="submitBtn">Register Student</button>
         </form>
     </section>

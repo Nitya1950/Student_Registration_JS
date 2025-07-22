@@ -123,21 +123,22 @@ window.deleteStudent = function(index) {
 
 // Initial render
 renderStudents();
-// Dark mode toggle handler
-const darkModeToggle = document.getElementById('darkModeToggle');
+// Dark mode toggle handler for button
+const darkModeToggle = document.getElementById('toggle-dark');
 
 // Load initial mode from localStorage
 if (localStorage.getItem('darkMode') === 'enabled') {
     document.body.classList.add('dark');
-    darkModeToggle.checked = true;
 }
 
-darkModeToggle.addEventListener('change', () => {
-    if (darkModeToggle.checked) {
-        document.body.classList.add('dark');
+// Toggle dark mode on button click
+darkModeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+
+    // Save preference
+    if (document.body.classList.contains('dark')) {
         localStorage.setItem('darkMode', 'enabled');
     } else {
-        document.body.classList.remove('dark');
         localStorage.setItem('darkMode', 'disabled');
     }
 });
