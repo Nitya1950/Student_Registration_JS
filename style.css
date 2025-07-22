@@ -28,7 +28,7 @@ body.dark .top-bar {
 }
 
 .school-logo {
-  height: 55px;
+  height: 100px;
   margin-right: 10px;
 }
 
@@ -226,7 +226,7 @@ button[type="submit"]:hover {
     color: #fff;
 }
 
-/* Scrollbar Styling */
+/* Scrollbar */
 .table-container::-webkit-scrollbar {
     width: 8px;
 }

@@ -22,7 +22,7 @@ function typeText(elementId, text, speed = 40) {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-    const text = "Register students, view, edit, and delete their records easily. All data is saved in your browser ^w^";
+    const text = "Register new students, edit, and delete their records all in one place.";
     typeText("sub-heading", text);
 });
 
@@ -34,7 +34,7 @@ const submitBtn = document.getElementById('submitBtn');
 
 let editIndex = null; // Track which record is being edited
 
-// Utility: Validate input fields using regex
+// Validate input fields using regex
 function validateInputs(name, id, email, contact) {
     const nameRegex = /^[A-Za-z ]+$/;
     const idRegex = /^\d+$/;
