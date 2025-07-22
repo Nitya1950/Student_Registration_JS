@@ -1,18 +1,44 @@
 // Student Registration System JavaScript
 // Handles form submission, validation, localStorage, and table updates
 
-// Select DOM elements
+//Typing effect on sub heading
+function typeText(elementId, text, speed = 40) {
+    let i = 0;
+    const target = document.getElementById(elementId);
+    target.innerHTML = "";
+    target.classList.remove("done"); // Reset class on refresh
+
+    function type() {
+        if (i < text.length) {
+            target.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(type, speed);
+        } else {
+            target.classList.add("done"); // Stop blinking cursor
+        }
+    }
+
+    type();
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+    const text = "Register students, view, edit, and delete their records easily. All data is saved in your browser ^w^";
+    typeText("sub-heading", text);
+});
+
+
+//  DOM elements
 const studentForm = document.getElementById('student-form');
 const studentsTableBody = document.querySelector('#studentsTable tbody');
 const submitBtn = document.getElementById('submitBtn');
 
 let editIndex = null; // Track which record is being edited
 
-// Utility: Validate input fields
+// Utility: Validate input fields using regex
 function validateInputs(name, id, email, contact) {
     const nameRegex = /^[A-Za-z ]+$/;
     const idRegex = /^\d+$/;
-    const contactRegex = /^\d{10}$/; // 7-15 digits
+    const contactRegex = /^\d{10}$/;
     const emailRegex = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
 
     if (!name || !id || !email || !contact) {
@@ -38,12 +64,12 @@ function validateInputs(name, id, email, contact) {
     return true;
 }
 
-// Utility: Get students from localStorage
+// Get students from localStorage
 function getStudents() {
     return JSON.parse(localStorage.getItem('students') || '[]');
 }
 
-// Utility: Save students to localStorage
+// Save students to localStorage
 function saveStudents(students) {
     localStorage.setItem('students', JSON.stringify(students));
 }

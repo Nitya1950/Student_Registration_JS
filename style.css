@@ -21,7 +21,7 @@ body.dark .top-bar {
   background-color: rgba(34, 33, 33, 0.7);
   border-color: #444;
 }
-
+/*top nav*/
 .school-brand {
   display: flex;
   align-items: center;
@@ -33,7 +33,9 @@ body.dark .top-bar {
 }
 
 .school-name {
-  font-size: 20px;
+  font-family: "Fleur De Leah", cursive;
+  font-style: normal;
+  font-size: 50px;
   font-weight: bold;
   color: #222;
 }
@@ -57,7 +59,7 @@ body.dark .school-name {
   background-color: #0056b3;
 }
 
-
+/*Header */
 header {
     background: #2ba7c6;
     color: #fff;
@@ -76,7 +78,22 @@ header p {
     margin: 0;
     font-size: 1.1rem;
 }
+#sub-heading::after {
+  content: '|';
+  animation: blink 1s infinite;
+  color: #333;
+  margin-left: 2px;
+}
 
+#sub-heading.done::after {
+  animation: none;
+  content: '';
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+/*form */
 #registration-section {
     background: #fff;
     margin: 2rem auto 1rem auto;
@@ -147,7 +164,7 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background: #1e768b;
 }
-
+/*Table of data*/
 #display-section {
     max-width: 900px;
     margin: 2rem auto;
