@@ -18,7 +18,7 @@ body {
 }
 
 body.dark .top-bar {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(34, 33, 33, 0.7);
   border-color: #444;
 }
 
@@ -28,7 +28,7 @@ body.dark .top-bar {
 }
 
 .school-logo {
-  height: 40px;
+  height: 55px;
   margin-right: 10px;
 }
 
